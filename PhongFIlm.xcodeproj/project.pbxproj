@@ -1,0 +1,585 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 50;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		3DE3168B2719B18700FEF006 /* PhongFIlmApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3DE3168A2719B18700FEF006 /* PhongFIlmApp.swift */; };
+		3DE3168D2719B18700FEF006 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3DE3168C2719B18700FEF006 /* ContentView.swift */; };
+		3DE3168F2719B18900FEF006 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 3DE3168E2719B18900FEF006 /* Assets.xcassets */; };
+		3DE316922719B18900FEF006 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 3DE316912719B18900FEF006 /* Preview Assets.xcassets */; };
+		3DE3169D2719B18900FEF006 /* PhongFIlmTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3DE3169C2719B18900FEF006 /* PhongFIlmTests.swift */; };
+		3DE316A82719B18900FEF006 /* PhongFIlmUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3DE316A72719B18900FEF006 /* PhongFIlmUITests.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		3DE316992719B18900FEF006 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 3DE3167F2719B18700FEF006 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 3DE316862719B18700FEF006;
+			remoteInfo = PhongFIlm;
+		};
+		3DE316A42719B18900FEF006 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 3DE3167F2719B18700FEF006 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 3DE316862719B18700FEF006;
+			remoteInfo = PhongFIlm;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		3DE316872719B18700FEF006 /* PhongFIlm.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = PhongFIlm.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		3DE3168A2719B18700FEF006 /* PhongFIlmApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhongFIlmApp.swift; sourceTree = "<group>"; };
+		3DE3168C2719B18700FEF006 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
+		3DE3168E2719B18900FEF006 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		3DE316912719B18900FEF006 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		3DE316932719B18900FEF006 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		3DE316982719B18900FEF006 /* PhongFIlmTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = PhongFIlmTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		3DE3169C2719B18900FEF006 /* PhongFIlmTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhongFIlmTests.swift; sourceTree = "<group>"; };
+		3DE3169E2719B18900FEF006 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		3DE316A32719B18900FEF006 /* PhongFIlmUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = PhongFIlmUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		3DE316A72719B18900FEF006 /* PhongFIlmUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhongFIlmUITests.swift; sourceTree = "<group>"; };
+		3DE316A92719B18900FEF006 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		3DE316842719B18700FEF006 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		3DE316952719B18900FEF006 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		3DE316A02719B18900FEF006 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		3DE3167E2719B18700FEF006 = {
+			isa = PBXGroup;
+			children = (
+				3DE316892719B18700FEF006 /* PhongFIlm */,
+				3DE3169B2719B18900FEF006 /* PhongFIlmTests */,
+				3DE316A62719B18900FEF006 /* PhongFIlmUITests */,
+				3DE316882719B18700FEF006 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		3DE316882719B18700FEF006 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				3DE316872719B18700FEF006 /* PhongFIlm.app */,
+				3DE316982719B18900FEF006 /* PhongFIlmTests.xctest */,
+				3DE316A32719B18900FEF006 /* PhongFIlmUITests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		3DE316892719B18700FEF006 /* PhongFIlm */ = {
+			isa = PBXGroup;
+			children = (
+				3DE3168A2719B18700FEF006 /* PhongFIlmApp.swift */,
+				3DE3168C2719B18700FEF006 /* ContentView.swift */,
+				3DE3168E2719B18900FEF006 /* Assets.xcassets */,
+				3DE316932719B18900FEF006 /* Info.plist */,
+				3DE316902719B18900FEF006 /* Preview Content */,
+			);
+			path = PhongFIlm;
+			sourceTree = "<group>";
+		};
+		3DE316902719B18900FEF006 /* Preview Content */ = {
+			isa = PBXGroup;
+			children = (
+				3DE316912719B18900FEF006 /* Preview Assets.xcassets */,
+			);
+			path = "Preview Content";
+			sourceTree = "<group>";
+		};
+		3DE3169B2719B18900FEF006 /* PhongFIlmTests */ = {
+			isa = PBXGroup;
+			children = (
+				3DE3169C2719B18900FEF006 /* PhongFIlmTests.swift */,
+				3DE3169E2719B18900FEF006 /* Info.plist */,
+			);
+			path = PhongFIlmTests;
+			sourceTree = "<group>";
+		};
+		3DE316A62719B18900FEF006 /* PhongFIlmUITests */ = {
+			isa = PBXGroup;
+			children = (
+				3DE316A72719B18900FEF006 /* PhongFIlmUITests.swift */,
+				3DE316A92719B18900FEF006 /* Info.plist */,
+			);
+			path = PhongFIlmUITests;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		3DE316862719B18700FEF006 /* PhongFIlm */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 3DE316AC2719B18900FEF006 /* Build configuration list for PBXNativeTarget "PhongFIlm" */;
+			buildPhases = (
+				3DE316832719B18700FEF006 /* Sources */,
+				3DE316842719B18700FEF006 /* Frameworks */,
+				3DE316852719B18700FEF006 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = PhongFIlm;
+			productName = PhongFIlm;
+			productReference = 3DE316872719B18700FEF006 /* PhongFIlm.app */;
+			productType = "com.apple.product-type.application";
+		};
+		3DE316972719B18900FEF006 /* PhongFIlmTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 3DE316AF2719B18900FEF006 /* Build configuration list for PBXNativeTarget "PhongFIlmTests" */;
+			buildPhases = (
+				3DE316942719B18900FEF006 /* Sources */,
+				3DE316952719B18900FEF006 /* Frameworks */,
+				3DE316962719B18900FEF006 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				3DE3169A2719B18900FEF006 /* PBXTargetDependency */,
+			);
+			name = PhongFIlmTests;
+			productName = PhongFIlmTests;
+			productReference = 3DE316982719B18900FEF006 /* PhongFIlmTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		3DE316A22719B18900FEF006 /* PhongFIlmUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 3DE316B22719B18900FEF006 /* Build configuration list for PBXNativeTarget "PhongFIlmUITests" */;
+			buildPhases = (
+				3DE3169F2719B18900FEF006 /* Sources */,
+				3DE316A02719B18900FEF006 /* Frameworks */,
+				3DE316A12719B18900FEF006 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				3DE316A52719B18900FEF006 /* PBXTargetDependency */,
+			);
+			name = PhongFIlmUITests;
+			productName = PhongFIlmUITests;
+			productReference = 3DE316A32719B18900FEF006 /* PhongFIlmUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		3DE3167F2719B18700FEF006 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 1250;
+				LastUpgradeCheck = 1250;
+				TargetAttributes = {
+					3DE316862719B18700FEF006 = {
+						CreatedOnToolsVersion = 12.5.1;
+					};
+					3DE316972719B18900FEF006 = {
+						CreatedOnToolsVersion = 12.5.1;
+						TestTargetID = 3DE316862719B18700FEF006;
+					};
+					3DE316A22719B18900FEF006 = {
+						CreatedOnToolsVersion = 12.5.1;
+						TestTargetID = 3DE316862719B18700FEF006;
+					};
+				};
+			};
+			buildConfigurationList = 3DE316822719B18700FEF006 /* Build configuration list for PBXProject "PhongFIlm" */;
+			compatibilityVersion = "Xcode 9.3";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 3DE3167E2719B18700FEF006;
+			productRefGroup = 3DE316882719B18700FEF006 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				3DE316862719B18700FEF006 /* PhongFIlm */,
+				3DE316972719B18900FEF006 /* PhongFIlmTests */,
+				3DE316A22719B18900FEF006 /* PhongFIlmUITests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		3DE316852719B18700FEF006 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				3DE316922719B18900FEF006 /* Preview Assets.xcassets in Resources */,
+				3DE3168F2719B18900FEF006 /* Assets.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		3DE316962719B18900FEF006 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		3DE316A12719B18900FEF006 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		3DE316832719B18700FEF006 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				3DE3168D2719B18700FEF006 /* ContentView.swift in Sources */,
+				3DE3168B2719B18700FEF006 /* PhongFIlmApp.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		3DE316942719B18900FEF006 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				3DE3169D2719B18900FEF006 /* PhongFIlmTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		3DE3169F2719B18900FEF006 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				3DE316A82719B18900FEF006 /* PhongFIlmUITests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		3DE3169A2719B18900FEF006 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 3DE316862719B18700FEF006 /* PhongFIlm */;
+			targetProxy = 3DE316992719B18900FEF006 /* PBXContainerItemProxy */;
+		};
+		3DE316A52719B18900FEF006 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 3DE316862719B18700FEF006 /* PhongFIlm */;
+			targetProxy = 3DE316A42719B18900FEF006 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin XCBuildConfiguration section */
+		3DE316AA2719B18900FEF006 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.5;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		3DE316AB2719B18900FEF006 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.5;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		3DE316AD2719B18900FEF006 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_ASSET_PATHS = "\"PhongFIlm/Preview Content\"";
+				DEVELOPMENT_TEAM = QLR8FWGCUP;
+				ENABLE_PREVIEWS = YES;
+				INFOPLIST_FILE = PhongFIlm/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = PVPhong.PhongFIlm;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		3DE316AE2719B18900FEF006 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_ASSET_PATHS = "\"PhongFIlm/Preview Content\"";
+				DEVELOPMENT_TEAM = QLR8FWGCUP;
+				ENABLE_PREVIEWS = YES;
+				INFOPLIST_FILE = PhongFIlm/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = PVPhong.PhongFIlm;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+		3DE316B02719B18900FEF006 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = QLR8FWGCUP;
+				INFOPLIST_FILE = PhongFIlmTests/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = PVPhong.PhongFIlmTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/PhongFIlm.app/PhongFIlm";
+			};
+			name = Debug;
+		};
+		3DE316B12719B18900FEF006 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = QLR8FWGCUP;
+				INFOPLIST_FILE = PhongFIlmTests/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = PVPhong.PhongFIlmTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/PhongFIlm.app/PhongFIlm";
+			};
+			name = Release;
+		};
+		3DE316B32719B18900FEF006 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = QLR8FWGCUP;
+				INFOPLIST_FILE = PhongFIlmUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = PVPhong.PhongFIlmUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = PhongFIlm;
+			};
+			name = Debug;
+		};
+		3DE316B42719B18900FEF006 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = QLR8FWGCUP;
+				INFOPLIST_FILE = PhongFIlmUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = PVPhong.PhongFIlmUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = PhongFIlm;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		3DE316822719B18700FEF006 /* Build configuration list for PBXProject "PhongFIlm" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				3DE316AA2719B18900FEF006 /* Debug */,
+				3DE316AB2719B18900FEF006 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		3DE316AC2719B18900FEF006 /* Build configuration list for PBXNativeTarget "PhongFIlm" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				3DE316AD2719B18900FEF006 /* Debug */,
+				3DE316AE2719B18900FEF006 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		3DE316AF2719B18900FEF006 /* Build configuration list for PBXNativeTarget "PhongFIlmTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				3DE316B02719B18900FEF006 /* Debug */,
+				3DE316B12719B18900FEF006 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		3DE316B22719B18900FEF006 /* Build configuration list for PBXNativeTarget "PhongFIlmUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				3DE316B32719B18900FEF006 /* Debug */,
+				3DE316B42719B18900FEF006 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 3DE3167F2719B18700FEF006 /* Project object */;
+}
