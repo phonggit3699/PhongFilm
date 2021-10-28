@@ -11,7 +11,7 @@ import SwiftUI
 struct PhongFIlmApp: App {
     var body: some Scene {
         WindowGroup {
-            ContentView()
+            Home()
         }
     }
 }
