@@ -21,8 +21,6 @@
 		3DE3168D2719B18700FEF006 /* Home.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3DE3168C2719B18700FEF006 /* Home.swift */; };
 		3DE3168F2719B18900FEF006 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 3DE3168E2719B18900FEF006 /* Assets.xcassets */; };
 		3DE316922719B18900FEF006 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 3DE316912719B18900FEF006 /* Preview Assets.xcassets */; };
-		3DE3169D2719B18900FEF006 /* PhongFIlmTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3DE3169C2719B18900FEF006 /* PhongFIlmTests.swift */; };
-		3DE316A82719B18900FEF006 /* PhongFIlmUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3DE316A72719B18900FEF006 /* PhongFIlmUITests.swift */; };
 		3DE316B62719B19900FEF006 /* CustomAVPlayer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3DE316B52719B19900FEF006 /* CustomAVPlayer.swift */; };
 /* End PBXBuildFile section */
 
@@ -61,11 +59,7 @@
 		3DE316912719B18900FEF006 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		3DE316932719B18900FEF006 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		3DE316982719B18900FEF006 /* PhongFIlmTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = PhongFIlmTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		3DE3169C2719B18900FEF006 /* PhongFIlmTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhongFIlmTests.swift; sourceTree = "<group>"; };
-		3DE3169E2719B18900FEF006 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		3DE316A32719B18900FEF006 /* PhongFIlmUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = PhongFIlmUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		3DE316A72719B18900FEF006 /* PhongFIlmUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhongFIlmUITests.swift; sourceTree = "<group>"; };
-		3DE316A92719B18900FEF006 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		3DE316B52719B19900FEF006 /* CustomAVPlayer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomAVPlayer.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -129,8 +123,6 @@
 			isa = PBXGroup;
 			children = (
 				3DE316892719B18700FEF006 /* PhongFIlm */,
-				3DE3169B2719B18900FEF006 /* PhongFIlmTests */,
-				3DE316A62719B18900FEF006 /* PhongFIlmUITests */,
 				3DE316882719B18700FEF006 /* Products */,
 			);
 			sourceTree = "<group>";
@@ -167,24 +159,6 @@
 				3DE316912719B18900FEF006 /* Preview Assets.xcassets */,
 			);
 			path = "Preview Content";
-			sourceTree = "<group>";
-		};
-		3DE3169B2719B18900FEF006 /* PhongFIlmTests */ = {
-			isa = PBXGroup;
-			children = (
-				3DE3169C2719B18900FEF006 /* PhongFIlmTests.swift */,
-				3DE3169E2719B18900FEF006 /* Info.plist */,
-			);
-			path = PhongFIlmTests;
-			sourceTree = "<group>";
-		};
-		3DE316A62719B18900FEF006 /* PhongFIlmUITests */ = {
-			isa = PBXGroup;
-			children = (
-				3DE316A72719B18900FEF006 /* PhongFIlmUITests.swift */,
-				3DE316A92719B18900FEF006 /* Info.plist */,
-			);
-			path = PhongFIlmUITests;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -336,7 +310,6 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				3DE3169D2719B18900FEF006 /* PhongFIlmTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -344,7 +317,6 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				3DE316A82719B18900FEF006 /* PhongFIlmUITests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
