@@ -53,9 +53,9 @@ extension CustomSlider {
     
     func getWidthSlider() -> CGFloat{
         if self.isFullScreen {
-            return getRect().height - 60
+            return getRect().height - 150
         }else{
-            return getRect().width - 60
+            return getRect().width - 150
         }
     }
 }

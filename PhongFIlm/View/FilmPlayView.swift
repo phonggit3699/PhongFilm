@@ -34,7 +34,7 @@ struct FilmPlayView: View {
                             self.isShowPlayBack.toggle()
                         }
                     CustomPlayBack(isPlaying: self.$isPlaying,avPlayer: self.$avPlayer, isPlayFilm: self.$isPlayFilm, isShowPlayBack: self.$isShowPlayBack, isFullScreen: self.$isFullScreen)
-                    
+           
                 }
                 else{
                     Rectangle()
@@ -45,16 +45,42 @@ struct FilmPlayView: View {
             .rotationEffect(self.isFullScreen ? .degrees(90) : .zero)
             .frame(width: self.isFullScreen ? getRect().height : nil, height: self.isFullScreen ? getRect().width: isSmallScreen ? 200 : 250)
             .offset(y: self.isFullScreen ? getOffsetFilmPlayWhenFullScreen() : 0)
-            .onRotate { newOrientation in
-                orientation = newOrientation
-            }
-            .onChange(of: self.orientation, perform: { value in
-                if value.isLandscape {
-                    self.isFullScreen = true
-                }else{
-                    self.isFullScreen = false
+    
+            // TODO: Episodes
+            if isFullScreen == false {
+                
+                Capsule()
+                    .fill(Color.gray)
+                    .frame(width: 100, height: 4)
+                    .padding(.vertical, 5)
+                
+                ScrollView(.vertical, showsIndicators: false) {
+                    VStack(alignment: .leading){
+                        Text("Episodes: ")
+                            .foregroundColor(.white)
+                        
+                        HStack(spacing: 10){
+                            ForEach(urlDemo.indices, id: \.self){index in
+                                Button {
+                                    selectEpisode(index: index)
+                                    self.isShowPlayBack.toggle()
+                                } label: {
+                                    Text("\(index)")
+                                        .padding(.horizontal, 10)
+                                        .padding(.vertical, 5)
+                                        .foregroundColor(.white)
+                                        .background( RoundedRectangle(cornerRadius: 6).fill(Color.blue))
+                                }
+                            }
+                        }
+                        
+                    }
+                    .padding(.horizontal)
+                    .frame(maxWidth: getRect().width, maxHeight: .infinity, alignment: .top)
                 }
-            })
+                .transition(.move(edge: .leading))
+            }
+  
         }
         .frame(maxWidth: getRect().width, maxHeight: .infinity, alignment: .top)
         .background(
@@ -81,6 +107,16 @@ struct FilmPlayView: View {
                 self.isPlaying = false
             }
         }
+        .onRotate { newOrientation in
+            orientation = newOrientation
+        }
+        .onChange(of: self.orientation, perform: { value in
+            if value.isLandscape{
+                self.isFullScreen = true
+            }else{
+                self.isFullScreen = false
+            }
+        })
     }
 }
 
@@ -92,7 +128,10 @@ struct CustomPlayBack: View {
     @Binding var isPlayFilm: Bool
     @Binding var isShowPlayBack: Bool
     @Binding var isFullScreen: Bool
+    
+    @State private var timeCountDown: String = ""
     @State private var value: CGFloat = 0
+    @State private var isReady: Bool = false
     
     var body: some View{
         ZStack {
@@ -116,7 +155,7 @@ struct CustomPlayBack: View {
                 Spacer()
             }
             
-            // //TODO: mid bar
+            //TODO: mid bar
             HStack(spacing: 40){
                 
                 // TODO: Seek 10 second Button
@@ -155,10 +194,17 @@ struct CustomPlayBack: View {
                         }
                         
                     }, label: {
-                        Image(systemName: self.isPlaying ? "pause.fill" : "play.fill")
-                            .resizable()
-                            .foregroundColor(.white)
-                            .frame(width: 22, height: 25)
+                        if self.isReady{
+                            Image(systemName: self.isPlaying ? "pause.fill" : "play.fill")
+                                .resizable()
+                                .foregroundColor(.white)
+                                .frame(width: 22, height: 25)
+                        }else{
+                            ProgressView()
+                                .progressViewStyle(CircularProgressViewStyle(tint: Color.white))
+                                .scaleEffect(1.5, anchor: .center)
+                        }
+                        
                     })
                 }
                 
@@ -179,6 +225,10 @@ struct CustomPlayBack: View {
                 Spacer()
                 
                 HStack(spacing: 10) {
+                    Text(self.timeCountDown)
+                        .foregroundColor(.white)
+                        .font(.caption)
+                    
                     CustomSlider(value: self.$value, avPlayer: self.$avPlayer, isFullScreen: self.$isFullScreen)
                     
                     Button(action: {
@@ -205,15 +255,25 @@ struct CustomPlayBack: View {
         .background(Color.gray.opacity(0.1))
         .opacity(self.isShowPlayBack ? 1 : 0)
         .onAppear{
+            self.isShowPlayBack.toggle()
             self.avPlayer?.addPeriodicTimeObserver(forInterval: CMTime(seconds: 1.0, preferredTimescale: 1), queue: .main, using: { _ in
                 guard let currentSecond = self.avPlayer?.currentTime().seconds else {
                     return
                 }
-                self.value = CGFloat(currentSecond / (self.avPlayer?.currentItem?.duration.seconds)!)
+                
+                guard self.avPlayer?.currentItem?.status == .readyToPlay, let totalTime: Double = self.avPlayer?.currentItem?.duration.seconds else {
+                    return
+                }
+                self.value = CGFloat(currentSecond / totalTime)
                 
                 if value == 1.0 {
                     self.isPlaying.toggle()
                 }
+                
+                let secs = Int(totalTime - currentSecond)
+                
+                // hours:munites:seconds
+                self.timeCountDown = countDown(secs: secs)
             })
         }
         .onChange(of: self.avPlayer, perform: { _ in
@@ -221,20 +281,37 @@ struct CustomPlayBack: View {
                 guard let currentSecond = self.avPlayer?.currentTime().seconds else {
                     return
                 }
-                self.value = CGFloat(currentSecond / (self.avPlayer?.currentItem?.duration.seconds)!)
+                
+                guard self.avPlayer?.currentItem?.status == .readyToPlay, let totalTime: Double = self.avPlayer?.currentItem?.duration.seconds else {
+                    return
+                }
+                self.value = CGFloat(currentSecond / totalTime)
                 
                 if value == 1.0 {
                     self.isPlaying.toggle()
                 }
+                
+                let secs = Int(totalTime - currentSecond)
+                
+                // hours:munites:seconds
+                self.timeCountDown = countDown(secs: secs)
             })
         })
         .onChange(of: self.isShowPlayBack, perform: { value in
-//            if value == true {
-//                DispatchQueue.main.asyncAfter(deadline: .now() + 3) {
-//                    self.isShowPlayBack.toggle()
-//                }
-//            }
+            if value == true {
+                DispatchQueue.main.asyncAfter(deadline: .now() + 3) {
+                    self.isShowPlayBack.toggle()
+                }
+            }
         })
+        .onChange(of: self.avPlayer?.currentItem?.status) { newValue in
+            if newValue == .readyToPlay {
+                self.isReady = true
+            }else{
+                self.isReady = false
+            }
+        }
+        
     }
 }
 
@@ -286,13 +363,26 @@ extension FilmPlayView {
     func getOffsetFilmPlayWhenFullScreen() -> CGFloat{
         return (getRect().height - getRect().width) / 2
     }
+    
 }
 
 extension CustomPlayBack {
     func getCurrentSecond() -> Double{
         return Double( Double(self.value) * (self.avPlayer?.currentItem?.duration.seconds)! )
     }
+    
+    func countDown(secs: Int) -> String {
+        if (secs / 3600) < 1 &&  ((secs % 3600) / 60) < 10{
+            return "0\((secs % 3600) / 60):\((secs % 3600) % 60)"
+        }else if ((secs % 3600) / 60) < 10 {
+            return "\(secs / 3600):0\((secs % 3600) / 60):\((secs % 3600) % 60)"
+        }else {
+            return "\(secs / 3600):\((secs % 3600) / 60):\((secs % 3600) % 60)"
+        }
+        
+    }
 }
+
 
 struct FilmPlayView_Previews: PreviewProvider {
     static var previews: some View {
