@@ -13,6 +13,7 @@ import UIKit
 
 struct CustomAVPlayer: UIViewControllerRepresentable{
     @Binding var avPlayer: AVPlayer?
+    @Binding var isResize: Bool
     
     func makeUIViewController(context: Context) -> AVPlayerViewController {
         
@@ -22,7 +23,7 @@ struct CustomAVPlayer: UIViewControllerRepresentable{
         
         avPlayerController.showsPlaybackControls = false
         
-        avPlayerController.videoGravity = .resizeAspectFill
+        avPlayerController.videoGravity = .resize
 
         return avPlayerController
     }
@@ -31,6 +32,7 @@ struct CustomAVPlayer: UIViewControllerRepresentable{
     
     func updateUIViewController(_ uiViewController: UIViewControllerType, context: Context) {
         uiViewController.player = self.avPlayer!
+        uiViewController.videoGravity = self.isResize ? .resizeAspect : .resize
     }
     
 }

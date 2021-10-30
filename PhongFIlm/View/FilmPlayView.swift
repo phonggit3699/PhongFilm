@@ -17,6 +17,8 @@ struct FilmPlayView: View {
     @State private var showButtonHide: Bool = false
     @State private var isShowPlayBack: Bool = false
     @State private var isFullScreen: Bool = false
+    @State private var isResize: Bool = false
+
     
     @Binding var filmURL: [URL?]
     @Binding var isPlayFilm: Bool
@@ -29,11 +31,11 @@ struct FilmPlayView: View {
             ZStack{
                 if self.avPlayer != nil {
                     
-                    CustomAVPlayer(avPlayer: self.$avPlayer)
+                    CustomAVPlayer(avPlayer: self.$avPlayer, isResize: self.$isResize)
                         .onTapGesture {
                             self.isShowPlayBack.toggle()
                         }
-                    CustomPlayBack(isPlaying: self.$isPlaying,avPlayer: self.$avPlayer, isPlayFilm: self.$isPlayFilm, isShowPlayBack: self.$isShowPlayBack, isFullScreen: self.$isFullScreen)
+                    CustomPlayBack(isPlaying: self.$isPlaying,avPlayer: self.$avPlayer, isPlayFilm: self.$isPlayFilm, isShowPlayBack: self.$isShowPlayBack, isFullScreen: self.$isFullScreen, isResize: self.$isResize)
            
                 }
                 else{
@@ -111,11 +113,13 @@ struct FilmPlayView: View {
             orientation = newOrientation
         }
         .onChange(of: self.orientation, perform: { value in
-            if value.isLandscape{
-                self.isFullScreen = true
-            }else{
-                self.isFullScreen = false
-            }
+            withAnimation {
+                if value.isLandscape{
+                    self.isFullScreen = true
+                }else{
+                    self.isFullScreen = false
+                }
+            } 
         })
     }
 }
@@ -128,6 +132,7 @@ struct CustomPlayBack: View {
     @Binding var isPlayFilm: Bool
     @Binding var isShowPlayBack: Bool
     @Binding var isFullScreen: Bool
+    @Binding var isResize: Bool
     
     @State private var timeCountDown: String = ""
     @State private var value: CGFloat = 0
@@ -149,6 +154,17 @@ struct CustomPlayBack: View {
                     })
                     
                     Spacer()
+                    
+                    
+                    Button(action: {
+                        self.isResize.toggle()
+                    }, label: {
+                        Image(systemName: self.isResize ? "arrow.down.right.and.arrow.up.left" : "arrow.up.left.and.arrow.down.right")
+                            .resizable()
+                            .foregroundColor(.white)
+                            .frame(width: 22, height: 22)
+                    })
+
                 }
                 .padding(.horizontal)
                 .padding(.top, getSafeArea().top)
