@@ -145,7 +145,13 @@ struct CustomPlayBack: View {
                 // TODO: Hide filmplayview button
                 HStack {
                     Button(action: {
-                        self.isPlayFilm.toggle()
+                        withAnimation {
+                            if self.isFullScreen {
+                                self.isFullScreen.toggle()
+                            }else{
+                                self.isPlayFilm.toggle()
+                            }
+                        }
                     }, label: {
                         Image(systemName: "chevron.compact.down")
                             .resizable()
@@ -162,12 +168,12 @@ struct CustomPlayBack: View {
                         Image(systemName: self.isResize ? "arrow.down.right.and.arrow.up.left" : "arrow.up.left.and.arrow.down.right")
                             .resizable()
                             .foregroundColor(.white)
-                            .frame(width: 22, height: 22)
+                            .frame(width: 20, height: 20)
                     })
 
                 }
                 .padding(.horizontal)
-                .padding(.top, getSafeArea().top)
+                .padding(.top, self.isFullScreen ? getSafeArea().right + 20 : getSafeArea().top)
                 Spacer()
             }
             
@@ -179,7 +185,7 @@ struct CustomPlayBack: View {
                     self.avPlayer?.seek(to: CMTime(seconds: getCurrentSecond() + 10, preferredTimescale: 1))
                     
                 }, label: {
-                    Image(systemName: "goforward.10")
+                    Image(systemName: "gobackward.10")
                         .resizable()
                         .foregroundColor(.white)
                         .frame(width: 22, height: 25)
@@ -229,7 +235,7 @@ struct CustomPlayBack: View {
                     self.avPlayer?.seek(to: CMTime(seconds: getCurrentSecond() - 10, preferredTimescale: 1))
                     
                 }, label: {
-                    Image(systemName: "gobackward.10")
+                    Image(systemName: "goforward.10")
                         .resizable()
                         .foregroundColor(.white)
                         .frame(width: 22, height: 25)
